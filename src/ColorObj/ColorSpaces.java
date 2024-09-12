@@ -60,7 +60,13 @@ public class ColorSpaces {
     }
 
     public void setColorArray(Color[][][] colorArray) {
-        this.colorArray = colorArray;
+        if (colorArray != null) {
+            this.colorArray = colorArray;
+        }
+    }
+
+    public Color getColor(int x, int y, int z) {
+        return colorArray[x][y][z];
     }
 
     public String getName() {
